@@ -21,6 +21,7 @@ from app.services.items import check_user_can_modify_item
 def get_items_filters(
     tag: Optional[str] = None,
     seller: Optional[str] = None,
+    title: Optional[str] = None,
     favorited: Optional[str] = None,
     limit: int = Query(DEFAULT_ITEMS_LIMIT, ge=1),
     offset: int = Query(DEFAULT_ITEMS_OFFSET, ge=0),
@@ -28,6 +29,7 @@ def get_items_filters(
     return ItemsFilters(
         tag=tag,
         seller=seller,
+        title=title,
         favorited=favorited,
         limit=limit,
         offset=offset,

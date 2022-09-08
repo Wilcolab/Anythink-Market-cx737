@@ -4,4 +4,4 @@ from pydantic import BaseModel
 
 
 class TagsInList(BaseModel):
-    tags: List[str]
+    tags: List[str], title
